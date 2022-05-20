@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="number" id="sayi1" min="0" />
+    <input type="number" id="sayi2" min="0" />
+
+    <input type="button" value="Hesapla" onclick="hesapla()" />
+
+    <h3 id="sonuc"></h3>
+
+    <script>
+      function hesapla() {
+        let sayi1 = Number(document.querySelector("#sayi1").value);
+        let sayi2 = Number(document.querySelector("#sayi2").value);
+
+        let yediAd = 0;
+        let ucAd = 0;
+
+        for (let i = sayi1; i <= sayi2; i++) {
+          if (i % 7 == 0) {
+            yediAd++;
+          }
+          if (i % 3 == 0) {
+            ucAd++;
+          }
+        }
+        document.querySelector(
+          "#sonuc"
+        ).innerText = `Yedi ile bolunen ${yediAd} , Uc ile bolunen ${ucAd} adet sayi vardir`;
+      }
+    </script>
+  </body>
+</html>

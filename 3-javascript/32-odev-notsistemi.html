@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <input type="number"  id="hedefAralik" min="0">
+   <input type="number"  id="bolen" min="0">
+   <input type="button" value="hesapla" onclick ="clickHesapla()">
+   <h1 id="sonuc"></h1>
+
+
+    <script>
+       function clickHesapla(){
+        const sayi = Number(document.querySelector("#hedefAralik").value);
+        const bolen = Number(document.querySelector("#bolen").value);
+        const sonuc = hesap(sayi,bolen);
+        document.querySelector("#sonuc").innerHTML = `${bolen} ile bolunen ${sonuc} adet sayi vardir`;
+       }
+        
+
+
+      function hesap(sayi, bolen){
+        let adet = 0;
+        for(i=1; i<sayi; i++){
+            
+            if(i%bolen ==0){
+                adet ++;
+            }
+        }
+        return adet;
+      }
+    </script>
+</body>
+</html>

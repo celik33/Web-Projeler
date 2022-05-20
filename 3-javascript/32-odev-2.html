@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" placeholder="Notunuzu Giriniz" id="sayi">
+    <input type="button" value="hesapla" onclick="clickHesapla()">
+    <h1 id="sonuc"></h1>
+
+
+
+    <script>
+        function clickHesapla(){
+            const sayi = document.querySelector("#sayi").value;
+            const sonuc = harfSis(sayi);
+
+            if(!sonuc){
+                alert("Lutfen 0- 100 arasi sayi giriniz");
+                return;
+            }
+            document.querySelector("#sonuc").innertHtml = "Harf Degeri: " + sonuc;
+
+            
+        }
+
+
+        function harfSis(sayi){
+            if(!sayi || isNaN(sayi) || sayi<0 || sayi>100) return false;
+
+            if(sayi>90){
+                let a = "A";
+                return a;
+            }
+            if(sayi>=80){
+                let a= "B";
+                return a;
+            }
+            if(sayi>=70){
+                let a = "C";
+                return a;
+            }
+            if(sayi>=50){
+                let a = "D";
+                return a;
+            }
+            if(sayi>=0){
+                let a = "F";
+                return a;
+            }
+            
+
+            
+        }
+    </script>
+</body>
+</html>

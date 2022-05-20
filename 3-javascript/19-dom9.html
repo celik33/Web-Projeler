@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="sayi1" type="number">+
+    <input id="sayi2" type="number">
+    <input id="toplam" type="button" value="Topla" onclick="toplam()">
+    <label id="lblSonuc"></label>
+
+
+    <script>
+        function toplam(){
+            const sayi1 = document.querySelector("#sayi1");
+            const sayi2 = document.querySelector("#sayi2");
+            const sonuc = document.querySelector("#lblSonuc");
+
+            sonuc.innerHTML = "Sonuc: " + (Number(sayi1.value) + Number(sayi2.value));
+        }
+    </script>
+</body>
+</html>

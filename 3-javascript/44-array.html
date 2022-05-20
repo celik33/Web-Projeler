@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .btn{
+            background-color: brown;
+            border: 0;
+            padding: 0.5rem 1rem;
+            border-radius: 0.3rem;
+        }
+
+        .txt-ad{
+            padding: 0.3rem;
+            border: 1px solid gray;
+            border-radius: 0.3rem;
+        }
+        
+    </style>
+</head>
+<body>
+    <div>
+        <input type="text"  id="txtAd" placeholder="adinizi giriniz" class="txt-ad" >
+        <input type="button" value="Ekle" id="btnEkle" class="btn" onclick="clickbtnEkle()">
+    </div>
+
+    <div style="margin-top: 1rem;">
+        <select size="10" id="LstAdlar" class="lst-adlar">
+
+        </select>
+    </div>
+
+    <div style="margin-top: 1rem;">
+        <input type="button" value="Sil" id="btnSil" class="btn" onclick="clickBtnSil()">
+        <input type="button" value="Sirala" id="btnSirala" class="btn" onclick="clickBtnSirala()">
+
+    </div>
+
+  <option ></option>
+    
+    <script>
+            let arrNames = ["Ali", "Veli", "Bahar", "Zeynep"];
+            function clickbtnEkle(){
+                const ad = document.querySelector("#txtAd").value;
+                arrNames.push(ad);
+                fillList();
+            }
+
+
+            
+            let siralaAnahtar = true;
+            function clickBtnSirala(){
+                arrNames.sort();
+                if(siralaAnahtar){
+                    arrNames.reverse();
+                    siralaAnahtar= false;
+                }else{
+                    siralaAnahtar = true;
+                }
+                fillList();
+            }
+
+
+
+
+            function clickBtnSil(){
+                const index = document.querySelector("#lstAdlar").selectedIndex;
+                aarNames.splice(index,1);
+                fillList();
+            }
+
+            function fillList(){
+                let strOption = "";
+                for(let i=0; i<arrNames.length; i++){
+                    strOption += `<option>${arrNames}</option>`;
+
+                }
+                document.querySelector("#lstAdlar").innertHTML = strOption;
+            }
+
+            fillList();
+    </script>
+</body>
+</html>

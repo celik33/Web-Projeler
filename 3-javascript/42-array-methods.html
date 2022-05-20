@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+    <script>
+        let sonuc = "";
+        const sayilar = [23, 123, 45, 67, 69, 1, 45, 78,90,89];
+
+        console.log(sayilar);
+
+        ssonuc = sayilar.push(33);
+        console.log(sayilar);
+        console.log(sonuc);
+        sayilar.pop();
+        console.log(sonuc);
+
+        console.log(sayilar);
+
+        sayilar.splice(3);
+        console.log(sayilar);
+
+        sayilar.splice(3, 1);
+        console.log(sayilar);
+
+        sayilar.splice(3,1,55,77);
+        console.log(sayilar);
+
+        sayilar.splice(3,0,100);
+        console.log(sayilar);
+
+        sayilar.sort();
+        console.log(sayilar);
+
+        sayilar.sort( function( a, b){
+            return a-b;
+        });
+
+        console.log(sayilar);
+
+
+        sayilar.sort( function( a, b){
+            return b-a;
+        });
+
+        console.log(sayilar);
+
+        sayilar.reverse();
+        console.log(sayilar);
+
+        sonuc = sayilar.includes(1000);
+        console.log(sonuc);
+
+
+    </script>
+</body>
+</html>

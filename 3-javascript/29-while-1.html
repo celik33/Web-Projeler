@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="number" name="" min="0" id="baslangic">
+    <input type="number" name="" min="0" id="bitis">
+    <input type="button" value="hesapla"  onclick="hesapla()">
+
+    <h3 id="sonuc"></h3>
+
+    <script>
+      function hesapla(){
+        let baslangic = Number(document.querySelector("#baslangic").value);
+        let bitis = Number(document.querySelector("#bitis").value);
+        let toplam = 0;
+
+        let sum = 0;
+        while(toplam <bitis){
+          toplam += baslangic;
+          baslangic ++;
+          sum ++;
+
+        }
+      
+      
+      document.querySelector("#sonuc").innerText = `Toplam ${sum} adet sayi var...`;
+      }
+      
+    </script>
+  </body>
+</html>

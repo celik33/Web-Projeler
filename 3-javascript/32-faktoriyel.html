@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="Bir sayi giriniz" id="sayi">
+    <input type="button" value="hesapla" onclick="clickHesapla()">
+
+
+
+
+    <script>
+        function clickHesapla(){
+            let sayi =document.querySelector("#sayi").value;
+            let sonuc = fakHesap(sayi);
+
+            if(!sonuc){
+                alert("Lutfen sifirdan buyuk sayi giriniz");
+                return;
+            }
+
+           alert(sonuc);
+        }
+
+
+        function fakHesap(fak){
+
+            if (!fak ||isNaN(fak) || fak< 0) return false;
+
+            let carpim = 1;
+
+            while(fak>0){
+                carpim *= fak;
+                fak--;
+                
+            }
+            return carpim;
+
+        }
+    </script>
+</body>
+</html>
